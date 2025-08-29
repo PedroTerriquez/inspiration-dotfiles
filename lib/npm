@@ -6,7 +6,9 @@ run_npm() {
   if ! type_exists 'npm'; then
     printf "\n"
     e_header "npm not found, installing..."
-    ruby -e "$(curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash)"
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+  else
+    log INFO "NVM already installed"
   fi
 
   #e_header "Installing Node.js packages..."
@@ -17,6 +19,6 @@ run_npm() {
   # Install packages globally and quietly
   #npm install $packages --global --quiet
 
-  [[ $? ]] && e_success "Done"
+  [[ $? -eq 0 ]] && e_success "Done"
 
 }
