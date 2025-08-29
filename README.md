@@ -44,8 +44,11 @@ curl -L raw.github.com/cesargomez89/inspiration-dotfiles/master/bin/dotfiles | b
 	 - The custom tmux binding is `C-a`(Ctrl + a).
 	 - To get all the tmux plugins working run: `C-a I` install all the plugins.
 	 - `C-a U` and type `all` to update all the plugins.
-
-Further information: [TPM](https://github.com/tmux-plugins/tpm)
+ - **iTerm**
+ 	- Remember to set in your profile
+    - font inconsolata_nerd_font_complete [Inconsolata Powerline Nerd Font](/files/inconsolata_nerd_font_complete.otf)
+    - theme [Monokai Soda Raw](https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Monokai%20Soda.itermcolors)
+    - should be downloaded on your $HOME directory.
 
 ## How to update
 
@@ -149,23 +152,13 @@ also be applied independently by running the following command:
 ```bash
 $ osxdefaults
 ```
-
-### Custom shell prompt
-
-Next Font and iTerm theme should be downloaded on your $HOME directory.
-
-Iterm theme:
-[Monokai Soda Raw](https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Monokai%20Soda.itermcolors)
-
-Font:
-[Inconsolata Powerline Nerd Font](/files/inconsolata_nerd_font_complete.otf)
-Remember to set the font in iterm2 profile
-
+### dotfiles only
 Neovim Dotfiles Only: https://github.com/cesargomez89/neovim-dotfiles
 
 Screenshot:
 
 ![Alt text](/files/screenshot.png)
+Further information: [TPM](https://github.com/tmux-plugins/tpm)
 
 ### Forking
 
