@@ -4,6 +4,7 @@ install_packages() {
     # List of libraries to install
     local libraries=(
         'git'
+        'python'
         'fzf'
         'coreutils'
         'zsh'
@@ -45,6 +46,14 @@ install_packages() {
 
     if brew list --formula | cut -d ' ' -f 1 | grep -q "^fzf\$"; then
         $(brew --prefix)/opt/fzf/install --all --no-bash --no-fish
+    fi
+
+    # Python 3 provider for Neovim
+    if command -v python3 >/dev/null 2>&1; then
+        pip3 install --user pynvim
+        [[ $? -eq 0 ]] && echo "Python3 provider (pynvim) installed ✔"
+    else
+        echo "Warning: Python3 not found!"
     fi
 
     # Display libraries not found
