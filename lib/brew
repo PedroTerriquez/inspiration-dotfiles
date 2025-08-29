@@ -44,27 +44,27 @@ install_packages() {
     done
 
     if brew list --formula | cut -d ' ' -f 1 | grep -q "^fzf\$"; then
-        $(brew --prefix)/opt/fzf/install
+        $(brew --prefix)/opt/fzf/install --all --no-bash --no-fish
     fi
 
     # Display libraries not found
     if [ ${#not_found[@]} -gt 0 ]; then
-        echo -e "\n\n"
-        echo -e "\033[1mThe following libraries were not found:\033[0m"
+        printf "\n\n"
+        printf "\033[1mThe following libraries were not found:\033[0m"
         printf '\033[0;31m%s\n\033[0m' "${not_found[@]}"
-        echo -e "\n\n"
+        printf "\n\n"
     fi
 
     if [ ${#already_installed[@]} -gt 0 ]; then
-        echo -e "\033[1mAlready installed libraries:\033[0m"
+        printf "\033[1mAlready installed libraries:\033[0m"
         printf '\033[0;33m%s\n\033[0m' "${already_installed[@]}"
-        echo -e "\n\n"
+        printf "\n\n"
     fi
 
     # List newly installed libraries from the script
     if [ ${#newly_installed[@]} -gt 0 ]; then
-        echo -e "\033[1mNewly installed libraries:\033[0m"
+        printf "\033[1mNewly installed libraries:\033[0m"
         printf '\033[0;32m%s\n\033[0m' "${newly_installed[@]}"
-        echo -e "\n\n"
+        printf "\n\n"
     fi
 }
