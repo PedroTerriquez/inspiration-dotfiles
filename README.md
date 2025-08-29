@@ -35,17 +35,15 @@ curl -L raw.github.com/cesargomez89/inspiration-dotfiles/master/bin/dotfiles | b
 
 ### After Install
 
-The first time openning neovim you have to use: `, + pi` to install all the plugins,
-then reopen nvim.
-
-The custom tmux binding is `C-a` (Ctrl + a).
-To get all the tmux plugins working run:
-`C-a I` install all the plugins.
-`C-a U` and type `all` to update all the plugins.
-
-For NeoVim Coc extensions run:
-
-nvim +'CocInstall -sync coc-git coc-fzf-preview coc-solargraph coc-highlight' +qall
+ - **NEOVIM**
+	 - The first time openning neovim you have to use: `, + pi` to install all the plugins, then reopen nvim.
+ - **NEOVIM COC extensions**
+	 - nvim +'CocInstall -sync coc-git coc-fzf-preview coc-solargraph coc-highlight' +qall
+	 - It doesnt have a visual status of progress, just wait on the black screen
+ - **TMUX**
+	 - The custom tmux binding is `C-a`(Ctrl + a).
+	 - To get all the tmux plugins working run: `C-a I` install all the plugins.
+	 - `C-a U` and type `all` to update all the plugins.
 
 Further information: [TPM](https://github.com/tmux-plugins/tpm)
 
